@@ -1,0 +1,332 @@
+Programs:
+--> Given list of integers using streams find square of each integer and integersgreter than 100
+--> Given list of Employees list the employees having salary greater than 30000
+--> reverse of no
+--> prime no
+--> print 
+*****
+****
+***
+**
+*
+--> scoreboard program- having user and score 2 objects: list users in decreasing order
+--> if(true){
+	break;
+}
+--> Find the position of robot after given movements. A robot moves on a grid. The grid has a X axis and Y axis. The robot can take the following commands:
+	L - The robot moves  one position left on  X axis.
+	R - The robot moves one position right on  X axis.
+	U - The robot moves one position up on  Y axis.
+	D - The robot moves one position down on Y axis.
+	
+	Considering the robot is at position 0,0 When given a String like RRULDDDLR, what is the final location of the robot on the grid?
+	
+
+class Robot {
+	psvm(){
+		String command = "RRULDDDLR";
+		char[] cmdArr = command.toCharArray();
+		int xAxis = 0, yAxis = 0;
+		if(cmdArr[i] == 'R') {
+			xAxis = 1;
+		} else 
+	}
+}
+-->
+aabbabc
+a2b2a1b1c1
+char[] chars = str.toCharArray();
+char[] opChars = new char[];
+int count=1;
+for(int i=0;i<chars.length;i++){
+	
+	if(chars[i].equals(chars[i+1])) {
+		count++;
+	} else {
+		if(!count==1){
+			sop(count);
+			count=1;
+		}
+		sop(chars[i]);
+	}
+}
+Merge sorting 
+Difference between OOP and Object based programming language
+Difference between Interface and Abstract
+forEach vs Iterator
+factory design pattern	
+http status codes
+HTTP Methods in RESTful Web Services
+invalidate, cachable and idempotent 
+diff bet @SpringBootApp and @EnableAutoConfiguration
+How you read data from properties file in spring boot
+@ConfigurationProperties
+@Configuration
+@PropertySource 
+@Validated
+@NotNull, @Min, @Max
+yaml file
+logger -- commons logging 
+@Primary
+@Configuration vs @Component
+Springboot version
+hibernate version
+immutable
+diff bet collection and streams
+break singleton: serialization(writing toobj and reading from obb or file;), refelction construtor, cloning
+disable auto configuration
+How u configure DI and use
+cache in hibernate
+get load
+save merge
+criteria
+mapping in db table
+can we have same bean name in one class
+how to get data from properties file
+can we have 2 data sources 
+mockito
+diff bet wrapper and int: generics, mutablity, nullable, stack and heap
+ExceptionHandling in String Boot
+map() in stream
+How to make class as immutable
+joins
+hibernate - criteria, second level session, cascade type, fetch type, mapping
+volatile keyword
+serialization
+Difference between String, String Buffer and Builder
+Syncronization
+How to stop threads
+Life cycle of threads and hibernate objects
+Difference between save and merge, save and update, get and load
+Different ways of creating threads
+@RequestMapping and @GetMapping
+@RestController and @Controller
+@Configuration
+@Component
+@Bean
+@Qualifier
+If we have same bean type how to remove ambiguity
+@Autowired
+@Value
+DI vs IOC
+How you configure DI in SpringBoot
+@Configuration vs @Controller
+Mockito
+IOC
+Comparable vs Comparator
+How you compare two collections
+Hash Set vs Hash Map
+Tree Set
+HashMap Internally working
+DI -- Pattern
+Design Patterns
+DB:
+How OneToOne mapping, OneToMany, ManyToMany structured in DB
+top tenth record from table
+static
+transient
+final
+ArrayList vs LinkedList
+ArrayList vs HashSet
+HashMap vs HashSet
+TreeSet vs HashSet
+Changing DB in SpringBoot
+HashMap internal implementation
+HashCode and Equals 
+can we have 2 default methods in functional interface
+How to create our own Immutable class
+Difference between throw and throws
+Exception Hierarchy
+How do therads communicate with each other
+How you overcome deadlock in threads
+Methods in Object class
+Difference between @PathVariable and @Requestparam
+ContentType in Restful
+Objectmapper
+How would you convert JSON to Object
+duplicate keys
+service 1 to 2 comm
+hash map and set
+@Qualifier
+changing db
+config for db
+try with resources
+predicate functional interface
+@functionalinterface
+if str="abc" str2="abc" then str.concat(str2)
+OOPS concept
+4
+Spring Boot & Micro services architecture
+java 7 
+angularjs in xattax
+spring boot
+RESTful
+hibernate
+Oracle database and Query language
+SQL statements; Procedures, Functions
+knowledge in microsevvices, jpa and java 8
+What are SOLID principles
+Answer Question
+How is Authentication added to MVC framework
+Answer Question
+What is Routing
+Answer Question
+oops concepts
+Difference between rest and soap
+Difference between div and table in HTML and how can you span rows or columns in a table without rowspan or colspan.
+Answer Question
+First non repeating character in a string
+Answer Question
+Detect and remove loop in a linkedlist
+Answer Question
+Internal working of hashing, garbage collector, object lifecycle in java
+Who many times a alphabet is repeated in a string
+1.What is the Difference between final,finally,finalize
+2.what is the difference between Call by value and call by referance
+3.How to find out the length of the string without using length function
+4.How to find out the part of the string from a string
+5.difference between throw & throws
+6.What is binding(Early and Late binding)
+He give Programes
+1.Reverse a number
+2.1,2,3,4,5,65,76,5,,4,33,4,34,232,3,2323,
+find the biggest number among these
+simple string programe.
+what is exception types of exception
+From manual
+tell me about Project .What are the challenge face during project
+what is the difference between RC and webdriver
+what is freamwork explain it.
+why we use wait statement.
+2nd technical
+he gives a application & tell to write the scenario
+some manual testing concepts.
+1. difference between string and string buffer?
+2. difference between linked list and arraylist?
+3. thread concepts?
+4. why string class is immutable?
+5. Singleton class?
+How to implement Queue using stacks?
+put and post
+security
+mapping response to rest
+Anonymouos class
+Default Methods
+Functional Interface: 1 abstract method 
+Lambda expressions
+Method References
+Optional
+forEach
+Date/Time API
+StringJoiner
+Collectors
+Stream API
+Stream Filter
+Junit & Mockito
+How will you connect Hibernate with MySQL databasae?
+ClassDefNotFoundError and ClassNotFoundException
+Basic pattern of interview
+1. OOPs
+2. Program -- Reverse a string, Buzz and Fizz, Square
+3. Interface vs Abstract
+4. Exception Handling
+5. List vs Set
+6. Hash Map vs Table
+7. Comparable and Comparator
+8. Hibernate -- get and load
+9. Overloading and Overriding
+10. Java design patterns
+11. Docker
+12. Tell me about yourself
+13. static
+14. Multithreading
+15. Singleton
+16. Spring IOC
+17. @Component
+18. @Bean
+19. JPA Query
+20. ClassNotFound and ClassDef 
+21. Error page
+22. flush vs refresh in hibernate
+23. HashMap vs arrayList 
+24. How to access application.properties in Spring
+25. Autowire
+26. Java streams
+27. Hibernate criteria
+28. Lambda expressions
+29. OutOfMemory Errors
+30. merge and quick sort
+Spring -- spring bean scope -- autowire
+Hibernate -- flush vs refresh -- load()  and gt() -- session
+Oracle, Postgress
+Problem solving skills
+hacker rank
+class not found vs class def error
+custom exception handling 
+hash map vs arraylist
+interface and abstract
+OutOfMemory in server
+oops concepts, method overriding and overloading
+merge and quick sort
+JPA
+square pgm, fuzz bizz 5 & 3 multiples
+difference between primitive and non primitive
+what happens if we add duplicate keys or values in hashmap
+aslist in java
+a null reference may be used to access a class (static) variable without causing an exception.
+@SpringBootApp
+RestController
+2 DataSource
+Find 2nd highest Salary of Employee
+@ResponseBody
+Collections methods
+rabitmq
+oauth
+ClassNotFoundException:
+This is an Exception
+Occurs when classpath is not updated for required jar files
+ 
+ClassDefNotFoundError:
+This is an Error
+Occurs when required class defenition is not present at runtime
+
+Exception Handling in Spring Boot:
+@ControllerAdvice is used to handle Exception globally
+@ExceptionHandler is used to handle specific exceptions and provide custom responses to the client
+
+const int a = 30;
+ConcurrentModificationException
+fields of interfaces are public	, static and final
+lamda expressions can be serializable only if arg are serializable
+iftrueorelse in optional
+0.0%0.0!=0.0/0.0 = true
+collection vs streams reg limited or unlimited
+@ResponseBody
+@RequestMapping method type
+transaction mngmt in spring
+create session factory
+actuator
+AOP
+primery key in hibernate
+session factory in hibernate
+application development
+architecure of current projet
+resolver npe in production not getting in local
+create non sprint boot application without spring
+logger in application
+jpa vs hibernate
+configuration file in boot
+joins
+5th highest
+painter not a singer
+continers in spring
+y spring boot
+Annotations in boot
+put , delete , post, get 
+security of rest
+mvc architecture
+jvm,jre,jdk
+oops concept
+configurations when we change server
+java 8 features
+lambda expression and y

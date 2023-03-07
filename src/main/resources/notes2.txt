@@ -1,0 +1,50 @@
+threadsafe singleton
+transient
+https://mkyong.com/java8/java-8-convert-list-to-map/
+https://www.geeksforgeeks.org/java-program-to-count-the-occurrence-of-each-character-in-a-string-using-hashmap/
+https://dzone.com/articles/data-hiding-using-jsonignore-and-spring-data-jpa
+should json java object serialized?
+json mapper
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId> 
+  <artifactId>jackson-core</artifactId>
+</dependency>
+Simply do this:
+jsongetter
+ObjectMapper mapper = new ObjectMapper();
+String json = mapper.writeValueAsString( serializableObject );
+https://www.baeldung.com/java-serialization-approaches#:~:text=Java%20Object%20to%20JSON,Java%20object%20as%20JSON%20output.&text=This%20code%20will%20write%20our,json%E2%80%9D%20file.
+https://www.geeksforgeeks.org/difference-between-map-and-flatmap-in-java-stream/
+limit objects in factory design pattern
+https://www.geeksforgeeks.org/difference-between-concurrenthashmap-and-synchronizedhashmap/
+https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/
+https://www.javabrahman.com/java-8/java-8-finding-maxmin-with-collectors-maxby-minby-methods-tutorial-with-examples/
+https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+https://newbedev.com/java-8-lambda-for-selecting-top-salary-employee-for-each-department
+select top 3 salary from each department streams
+parallel stream in java
+https://www.geeksforgeeks.org/what-is-java-parallel-streams/
+finalize() Method in Java and How to Override it? - GeeksforGeeks
+synchronized block in java
+Java 8 Method Reference - javatpoint
+ Can we use object as a key in hashmap in Java? - Stack
+ Stream.reduce() | Baeldung
+ @JsonAnyGetter
+ 
+ https://stackoverflow.com/questions/14172621/whats-the-advantage-of-pojo
+ https://www.javatpoint.com/program-to-find-the-duplicate-characters-in-a-string
+ https://www.indiabix.com/java-programming/java-lang-class/026001
+ https://java.meritcampus.com/core-java-questions/Guess-Output
+ https://www.geeksforgeeks.org/create-immutable-class-java/
+  @ControllerAdvice
+  https://java-questions.com/Serialization-interview-questions.html#:~:text=Q6)%20What%20happens%20if%20the,of%20the%20object%20in%20question.
+  
+  Q) Can we execute a program without main() method?
+Ans) No, one of the ways was the static block, but it was possible till JDK 1.6. Since JDK 1.7, it is not possible to execute a Java class without the main method.
+
+tar
+
+github - 0900812062144sR! - 44shravan@gmail.com
+  
+
+
