@@ -71,6 +71,11 @@ public static void main(String[] args) {
 
     crunchifyList.remove("Google");
     System.out.println(crunchifyList);
+    
+    
+    System.out.println("\n==============> 8. replaceAll Example....");
+    crunchifyList.replaceAll((crunchifyTemp) -> crunchifyTemp+ "test");
+    System.out.println(crunchifyList);
 
 
     /*
