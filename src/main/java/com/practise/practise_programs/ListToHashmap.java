@@ -22,5 +22,7 @@ public static void main(String[] args) {
 	empMap1 = empList.stream().collect(Collectors.toMap(e->e.getId(), e->e));
 	System.out.println(empMap1);
 	
+	empList.stream().map(p->p.getId()).forEach(System.out::println);
+	
 }
 }

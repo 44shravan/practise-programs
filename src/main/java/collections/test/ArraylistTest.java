@@ -9,6 +9,9 @@ import java.util.ListIterator;
 
 public class ArraylistTest {
 public static void main(String[] args) {
+	
+	//ArrayList<int> test = new ArrayList<>(); compile error
+	
 	ArrayList<String> al = new ArrayList<>();
 	al.add("testing");
 	ArrayList<String> al2 = new ArrayList<String>();

@@ -12,5 +12,8 @@ public static void main(String[] args) {
  mapcon.put("k4", 400);   
  System.out.println("HashMap values :\n " + mapcon);  
  mapcon.computeIfAbsent("k5", k -> 200 + 300);
+ 
+ mapcon.forEach((k,v)->System.out.println("key - "+k+" value - "+v));
+ mapcon.entrySet().forEach(e->System.out.println("key - "+e.getKey()+" value - "+e.getValue()));
 }
 }
