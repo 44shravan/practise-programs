@@ -4,6 +4,17 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
+class Cart{
+	private int num;
+
+	public int getNum() {
+		return num;
+	}
+
+	public Cart(int num) {
+		this.num = num;
+	}
+}
 public class HashsetTest {
 public static void main(String[] args) {
 	HashSet<String> set=new HashSet();  
@@ -29,6 +40,13 @@ public static void main(String[] args) {
      al.add("Ravi");  
      //al.add(null);  //null oitner exception
      System.out.println(al);
+     
+     
+     HashSet<Cart> cSet=new HashSet();
+     cSet.add(new Cart(1));
+     cSet.add(new Cart(1));
+     System.out.println(cSet);
+     
 }
 }
 /*
