@@ -1,0 +1,1293 @@
+threadsafe singleton
+transient
+https://mkyong.com/java8/java-8-convert-list-to-map/
+https://www.geeksforgeeks.org/java-program-to-count-the-occurrence-of-each-character-in-a-string-using-hashmap/
+https://dzone.com/articles/data-hiding-using-jsonignore-and-spring-data-jpa
+should json java object serialized?
+json mapper
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId> 
+  <artifactId>jackson-core</artifactId>
+</dependency>
+Simply do this:
+jsongetter
+ObjectMapper mapper = new ObjectMapper();
+String json = mapper.writeValueAsString( serializableObject );
+https://www.baeldung.com/java-serialization-approaches#:~:text=Java%20Object%20to%20JSON,Java%20object%20as%20JSON%20output.&text=This%20code%20will%20write%20our,json%E2%80%9D%20file.
+https://www.geeksforgeeks.org/difference-between-map-and-flatmap-in-java-stream/
+limit objects in factory design pattern
+https://www.geeksforgeeks.org/difference-between-concurrenthashmap-and-synchronizedhashmap/
+https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/
+https://www.javabrahman.com/java-8/java-8-finding-maxmin-with-collectors-maxby-minby-methods-tutorial-with-examples/
+https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+https://newbedev.com/java-8-lambda-for-selecting-top-salary-employee-for-each-department
+select top 3 salary from each department streams
+parallel stream in java
+https://www.geeksforgeeks.org/what-is-java-parallel-streams/
+finalize() Method in Java and How to Override it? - GeeksforGeeks
+synchronized block in java
+Java 8 Method Reference - javatpoint
+ Can we use object as a key in hashmap in Java? - Stack
+ Stream.reduce() | Baeldung
+ @JsonAnyGetter
+ 
+ https://stackoverflow.com/questions/14172621/whats-the-advantage-of-pojo
+ https://www.javatpoint.com/program-to-find-the-duplicate-characters-in-a-string
+ https://www.indiabix.com/java-programming/java-lang-class/026001
+ https://java.meritcampus.com/core-java-questions/Guess-Output
+ https://www.geeksforgeeks.org/create-immutable-class-java/
+  @ControllerAdvice
+  https://java-questions.com/Serialization-interview-questions.html#:~:text=Q6)%20What%20happens%20if%20the,of%20the%20object%20in%20question.
+  
+  Q) Can we execute a program without main() method?
+Ans) No, one of the ways was the static block, but it was possible till JDK 1.6. Since JDK 1.7, it is not possible to execute a Java class without the main method.
+
+  
+optional streams
+
+Tomcat
+According to Tomcat documentation, the HttpSession attributes also need to be Serializable:
+
+Whenever Apache Tomcat is shut down normally and restarted, or when an application reload is triggered, the standard Manager implementation will attempt to serialize all currently active sessions to a 
+disk file located via the pathname attribute. All such saved sessions will then be deserialized and activated (assuming they have not expired in the mean time) when the application reload is completed.
+
+In order to successfully restore the state of session attributes, all such attributes MUST implement the java.io.Serializable interface.
+
+https://stackoverflow.com/questions/74958947/when-object-needs-to-be-serialized-in-spring-boot
+
+but if serialized! every time we change the class Person, we change the serialVersionUID, we can make sure we use the same class\Object to use(Because, even if I create the Person class separately, 
+since the serialVersionUID is modified every time, when the original Person changes, I can’t use my Person to replace it, so I have to get the original Person’s serialVersionUID. At this time, I can 
+see your modification, and I will synchronize to my own class to avoid mistakes).
+@Scheduled(cron = "0 * 9 * * ?")
+public void cronJobSch() throws Exception {
+}
+
+parallel stream
+
+  @MockBean
+  
+  given(employeeService.saveEmployee(any(Employee.class)))
+                .willAnswer((invocation)-> invocation.getArgument(0));
+
+
+ResultActions response = mockMvc.perform(post("/api/employees")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(objectMapper.writeValueAsString(employee)));
+ response.andDo(print()).
+                andExpect(status().isCreated())
+                .andExpect(jsonPath("$.firstName",
+                        is(employee.getFirstName())))
+                .andExpect(jsonPath("$.lastName",
+                        is(employee.getLastName())))
+                .andExpect(jsonPath("$.email",
+                        is(employee.getEmail())));
+						
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
+What is L1 and L2 cache in Hibernate?
+L1 Cache is the cache that exists per Hibernate session, and this cache is not shared among threads. This cache makes use of Hibernate's own caching. L2 Cache is a cache that survives beyond a 
+Hibernate session, and can be shared among threads.
+
+
+exit(0) - Indicates successful termination
+exit(1) - Indicates unsuccessful termination
+exit(-1) - Indicates unsuccessful termination with Exception
+
+Spring IoC (Inversion of Control) Container is the core of Spring Framework.
+
+Dependency Injection is the main functionality provided by Spring IOC(Inversion of Control). The Spring-Core module is responsible for injecting dependencies th
+
+ 1. Microservices · 2. Containers · 3. Service mesh · 4. Service discovery · 5. API gateway.
+ 
+ Principle	Description
+Single Responsibility Principle	Each class should be responsible for a single part or functionality of the system.
+Open-Closed Principle	Software components should be open for extension, but not for modification.
+Liskov Substitution Principle	Objects of a superclass should be replaceable with objects of its subclasses without breaking the system.
+Interface Segregation Principle	No client should be forced to depend on methods that it does not use.
+Dependency Inversion Principle	High-level modules should not depend on low-level modules, both should depend on abstractions.
+
+https://www.educative.io/answers/what-are-the-solid-principles-in-java
+
++new relic
+
+
+abstract - constructors
+
+When a class doesn't declare any constructor, the compiler creates a default constructor for us. This is also true for abstract classes. Even when there's no explicit constructor, the abstract class 
+will have a default constructor available.
+
+In an abstract class, its descendants can invoke the abstract default constructor using super():
+
+public abstract class AbstractClass {
+    // compiler creates a default constructor
+}
+
+public class ConcreteClass extends AbstractClass {
+
+    public ConcreteClass() {
+        super();
+    }
+}
+ // implement readResolve method
+    protected Object readResolve() { return instance; }
+	
+	
+
+The word SOLID acronym for:
+
+Single Responsibility Principle (SRP)
+Open-Closed Principle (OCP)
+Liskov Substitution Principle (LSP)
+Interface Segregation Principle (ISP)
+Dependency Inversion Principle (DIP)
+
+Thus, we propose the following set of core principles for microservice design:
+
+Interface segregation
+Deployability (is on you)
+Event-driven
+Availability over consistency
+Loose coupling
+Single responsibility  -  IDEALS
+
+
+Property of Transaction
+Atomicity
+Consistency
+Isolation
+Durability
+DBMS Transaction property
+
+204
+
+
+OPTIONS method returns info about API (methods/content type)
+
+HEAD method returns info about resource (version/length/type)
+
+The difference between POST and PUT is that PUT requests are idempotent. That is, calling the same PUT request multiple times will always produce the same result. In contrast, calling a POST request 
+repeatedly have side effects of creating the same resource multiple times.
+
+https://stackoverflow.com/questions/44274982/spring-boot-application-what-is-default-timeout-for-any-rest-api-endpoint-or-a
+
+
+public RestTemplate restTemplate() {
+    return new RestTemplate(clientHttpRequestFactory());
+}
+
+private ClientHttpRequestFactory clientHttpRequestFactory() {
+    HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
+    factory.setReadTimeout(timeinMillis);
+    factory.setConnectTimeout(timeinMillis);
+    return factory;
+}
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=2000
+
+What is the corresponding environment variable ?
+
+I would like to "tune" the timeout on my favorite cloud platform without touching the source code first. I'm pretty sure this one doesn't work : 
+HYSTRIX_COMMAND_DEFAULT_EXECUTION_ISOLATION_THREAD_TIMEOUT_IN_MILLISECONDS=2000
+
+CQRS Design Pattern
+CQRS is one of the important pattern when querying between microservices. We can use CQRS design pattern in order to avoid complex queries to get rid of inefficient joins. CQRS stands for Command and 
+Query Responsibility Segregation. Basically this pattern separates read and update operations for a database.
+
+
+JIT compiler - used at runtime     
+by compiling bytecodes to native machine code at run time.
+
+at compile time - .java - > compiler -> bytecode -> 
+at run time -> bytecode -> jit compiler- > machine code
+
+The Fail Fast system is a system that shuts down immediately after an error is reported. All the operations will be aborted instantly in it. The Fail Safe is a system that continues to operate even 
+after an error or fail has occurred.
+
+https://www.javatpoint.com/fail-fast-and-fail-safe-iterator-in-java#:~:text=The%20Fail%20Fast%20system%20is,error%20or%20fail%20has%20occurred.
+
+Base of Comparison	Fail Fast Iterator	Fail Safe Iterator
+Exception	It throws a ConcurrentModificationException in modifying the object during the iteration process.	It does not throw Exception.
+Clone Object	No clone object is created during the iteration process.	A copy or clone object is created during the iteration process.
+Memory utilization	It requires low memory during the process.	It requires more memory during the process.
+Modification	It does not allow modification during iteration.	It allows modification during the iteration process.
+Performance	It is fast.	It is slightly slower than Fail Fast.
+Examples	HashMap, ArrayList, Vector, HashSet, etc	CopyOnWriteArrayList, ConcurrentHashMap, etc.
+
+Spring Modules
+Spring Modules
+Test
+Spring Core Container
+AOP, Aspects and Instrumentation
+Data Access / Integration
+Web
+The Spring framework comprises of many modules such as core, beans, context, expression language, AOP, Aspects, Instrumentation, JDBC, ORM, OXM, JMS, Transaction, Web, Servlet, Struts etc. These 
+modules are grouped into Test, Core Container, AOP, Aspects, Instrumentation, Data Access / Integration, Web (MVC / Remoting) as displayed in the following diagram.
+
+
+We can use Message brokers such as RabbitMQ and Apache Kafka to make Asynchronous Communication between multiple microservices.
+resttemplate for communication\
+
+@Validated annotation is a class-level annotation that we can use to tell Spring to validate parameters that are passed into a method of the annotated class.
+
+and
+
+@Valid annotation on method parameters and fields to tell Spring that we want a method parameter or field to be validated.
+
+   HttpHeaders headers = new HttpHeaders();
+      headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+      HttpEntity<Product> entity = new HttpEntity<Product>(product,headers);
+      
+      return restTemplate.exchange(
+         "http://localhost:8080/products", HttpMethod.POST, entity, String.class).getBody();
+   }
+}
+
+
+46
+
+
+Yes You can use both at same time in same project.
+
+When you use both YML and properties at same time, say for example
+application.yml and application.properties at same time in same
+project, first application.yml will be loaded, later
+application.properties will be loaded.
+Important point to be noted is that if application.yml and application.properties have same keys for example in application.yml has spring.app.name = testYML and application.properties has 
+spring.app.name = testProperties at same time in same project, then application.yml value will be overwritten by application.properties value since it is loading at last.
+And the value in spring.app.name = testProperties.
+
+@SpringBootApplication
+@EnableHystrix
+@RestController
+public class HystrixappApplication {
+   public static void main(String[] args) {
+      SpringApplication.run(HystrixappApplication.class, args);
+   }
+   @RequestMapping(value = "/")
+   @HystrixCommand(fallbackMethod = "fallback_hello", commandProperties = {
+      @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+   })
+   public String hello() throws InterruptedException {
+      Thread.sleep(3000);
+      return "Welcome Hystrix";
+   }
+   private String fallback_hello() {
+      return "Request fails. It takes long time to response";
+   }
+}
+
+javatpoint.com/java-try-with-resources
+try(FileOutputStream fileOutputStream =newFileOutputStream("/java7-new-features/src/abc.txt")){      
+String msg = "Welcome to javaTpoint!";   
+
+
+can abstract class have static methods in java - no
+
+no default methods in abstract class - no
+
+stateless
+json vs soap
+
+new relic
+What is New Relic tool used for?
+Image result for new relic
+New Relic is a Software as a Service offering that focuses on performance and availability monitoring. It uses a standardized Apdex (application performance index) score to set and rate application 
+performance across the environment in a unified manner.
+
+
+Stateless: REST APIs are stateless, meaning that calls can be made independently of one another, and each call contains all of the data necessary to complete itself successfully.
+
+Because the user receives a JWT after a successful login, which contains all important information about the user. This means that the session no longer has to be saved on the server and is therefore 
+also called a stateless session.
+Why should REST API be stateless?
+A. REST APIs are stateless because, rather than relying on the server remembering previous requests, REST applications require each request to contain all of the information necessary for the server 
+to 
+understand it. Storing session state on the server violates the REST architecture's stateless requirement.
+
+
+jaxb - soap calls
+
+JSON	SOAP
+It is an object.	It is a protocol.
+It maintains  a format of the key-value pair	It maintains an XML format
+It contains the message only.	It contains envelop, headers, body, faults, etc. Some of the elements are optional.
+UI integration is easy in json
+
+
+@Controller
+
+@RestController
+
+@enableAutoConfiguration
+
+@Controller is used to mark classes as Spring MVC Controller.	@RestController annotation is a special controller used in RESTful Web services, and it’s the combination of @Controller and 
+@ResponseBody annotation.
+It is a specialized version of @Component annotation.	It is a specialized version of @Controller annotation.
+In @Controller, we can return a view in Spring Web MVC.	In @RestController, we can not return a view.
+@Controller annotation indicates that the class is a “controller” like a web controller.	@RestController annotation indicates that class is a controller where @RequestMapping methods assume 
+@ResponseBody semantics by default.
+In @Controller, we need to use @ResponseBody on every handler method.	In @RestController, we don’t need to use @ResponseBody on every handler method.
+
+@EnableCaching 
+We apply this annotation at the main class (starter class) of our application in order to tell Spring Container that we need a caching feature in our application.
+@Cacheable 
+@Cacheable is used to fetch (retrieve) data from the DB to the application and store in Redis Cache.
+@CachePut 
+We use @CachePut in order to update data in the Redis Cache while there is any update of data in DB. We apply it on the methods that make modifications in DB.
+
+@CacheEvict 
+We use @CacheEvict in order to remove the data in the Redis Cache while there is any removal of data in DB. We apply it on the methods that delete data from DB. It can be used with void methods.
+@Cacheable(value="Invoice", key="#invId")
+    public Invoice getOneInvoice(Integer invId) {
+       Invoice invoice = invoiceRepo.findById(invId)
+         .orElseThrow(() -> new InvoiceNotFoundException("Invoice Not Found"));
+       return invoice;
+    }
+
+
+
+@Service
+public class KafkaSender {
+	
+	@Autowired
+	private KafkaTemplate<String, String> kafkaTemplate;
+	
+	String kafkaTopic = "java_in_use_topic";
+	
+	public void send(String message) {
+	    
+	    kafkaTemplate.send(kafkaTopic, message);
+	}
+}
+
+ kafkaTemplate.send(AppConstants.TOPIC_NAME, message);
+
+Producer ->broker->consumer
+ @KafkaListener(topics = AppConstants.TOPIC_NAME,
+                    groupId = AppConstants.GROUP_ID)
+    public void consume(String message){
+        LOGGER.info(String.format("Message received -> %s", message));
+
+
+ClassNotFoundException occurs when you try to load a class at runtime using Class.forName() or loadClass() methods and requested classes are not found in classpath
+
+As the name suggests, ClassNotFoundException is an exception while NoClassDefFoundError is an error.
+ClassNotFoundException occurs when classpath does not get updated with required JAR files while error occurs when the required class definition is not present at runtime.
+
+NoClassDefFoundError occurs when a compiled class references another class that isn’t on the runtime classpath.
+
+The @RefreshScope annotation is used to load the configuration properties value from the Config server.
+
+
+@ConfigurationProperties(prefix = "mail") 
+
+
+count(): long
+
+returns the number of entities available.
+
+2	
+delete(Employee entity): void
+
+deletes an entity.
+
+3	
+deleteAll():void
+
+deletes all the entities.
+
+4	
+deleteAll(Iterable< extends Employee > entities):void
+
+deletes the entities passed as argument.
+
+5	
+deleteAll(Iterable< extends Integer > ids):void
+
+deletes the entities identified using their ids passed as argument.
+
+6	
+existsById(Integer id):boolean
+
+checks if an entity exists using its id.
+
+7	
+findAll():Iterable< Employee >
+
+returns all the entities.
+
+8	
+findAllByIds(Iterable< Integer > ids):Iterable< Employee >
+
+returns all the entities identified using ids passed as argument.
+
+9	
+findById(Integer id):Optional< Employee >
+
+returns an entity identified using id.
+
+10	
+save(Employee entity): Employee
+
+saves an entity and return the updated one.
+
+11	
+saveAll(Iterable< Employee> entities): Iterable< Employee>
+
+saves all entities passed and return the updated entities.
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class MskTests {
+
+	@Test
+	
+	
+java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mskController' method 
+public com.msk.modal.Person com.msk.controller.MskController.mskTest2() throws java.lang.InterruptedException
+to {[/api/getname],methods=[GET]}: There is already 'mskController' bean method
+
+
+
+NO, we can't override static methods since method overriding relies on dynamic binding at runtime, but static methods are bonded at compile time with static binding. As a result, we are unable to 
+override static methods.
+
+transaction isolation level Dirty read: read the uncommitted change of a concurrent transaction
+Nonrepeatable read: get different value on re-read of a row if a concurrent transaction updates the same row and commits
+Phantom read: get different rows after re-execution of a range query if another transaction adds or removes some rows in the range and commits
+We can set the isolation level of a transaction by @Transactional::isolation. It has these five enumerations in Spring: DEFAULT, READ_UNCOMMITTED, READ_COMMITTED, REPEATABLE_READ, SERIALIZABLE.
+
+
+starter security dependency
+
+@Component
+public class JwtRequestFilter extends OncePerRequestFilter {
+
+@Override
+	protected void doFilterInternal
+	
+	JwtTokenUtil implements Serializable {
+
+	private static final long serialVersionUID = -2550185165626007488L;
+
+	public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+
+	@Value("${jwt.secret}")
+	private String secret;
+
+	//retrieve username from jwt token
+	public String getUsernameFromToken(String token) {
+		return getClaimFromToken(token, Claims::getSubject);
+	}
+
+	//retrieve expiration date from jwt token
+	private String doGenerateToken(Map<String, Object> claims, String subject) {
+
+		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
+				.signWith(SignatureAlgorithm.HS512, secret).compact();
+	}
+
+	//validate token
+	public Boolean validateToken(
+	
+	@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+@Override
+	protected void configure(HttpSecurity httpSecurity) throws Exception {
+		// We don't need CSRF for this examp
+		getjwtauthentiFilkter();
+		
+		@Bean
+		jwtauthentiFilkter getjwtauthentiFilkter(){
+		return new jwtauthentiFilkter();
+		
+		
+		https://www.youtube.com/watch?v=_QB5_oglOJk&ab_channel=KCTechnologies%2CDevOpsandAWStraininginstitute
+		
+		
+		
+		
+		select * from (
+select first_name, salary 
+from employees order by salary desc
+) where rownum <= 10
+
+@Profile("2020")
+
+
+
+@ConditionalOnProperty(value='mybean.enabled')
+@Bean 
+MyOptionalClass optionalBean(){
+}
+
+XA transaction API springboot
+
+
+https://www.infoworld.com/article/2077963/distributed-transactions-in-spring--with-and-without-xa.html
+
+By default, the @Autowired will perform the dependency checking to make sure the property has been wired properly. When Spring can’t find a matching bean to wire, it will throw an exception. To fix it
+, 
+you can disable this checking feature by setting the “required” attribute of @Autowired to false.
+
+
+
+//Before Generics, we need to type cast.
+
+List list = new ArrayList();    
+list.add("hello");    
+String s = (String) list.get(0);//typecasting    
+
+//After Generics, we don't need to typecast the object. 
+ 
+List<String> list = new ArrayList<String>();    
+list.add("hello");    
+String s = list.get(0);    
+
+
+https://howtodoinjava.com/spring-cloud/spring-boot-ribbon-eureka/
+-load balance
+
+spring.application.name=client
+server.port=8888
+ 
+eureka.client.serviceUrl.defaultZone= http://${registry.host:localhost}:${registry.port:8761}/eureka/
+eureka.client.healthcheck.enabled= true
+eureka.instance.leaseRenewalIntervalInSeconds= 1
+eureka.instance.leaseExpirationDurationInSeconds= 2
+ 
+server.ribbon.eureka.enabled=true
+#server.ribbon.listOfServers=localhost:9090,localhost:9091,localhost:9092
+server.ribbon.ServerListRefreshInterval=1000
+#logging.level.root=TRACE
+
+@EnableDiscoveryClient
+@SpringBootApplication
+@RibbonClient(name = "server", configuration = RibbonConfiguration.class)
+
+10
+
+
+You can disable auto configuration in spring-boot using exclude attribute of @EnableAutoConfiguration, as follows:
+
+@Configuration
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+public class TestConfig {
+}
+
+
+@ControllerAdvice
+public class ControllerAdvisor extends ResponseEntityExceptionHandler {
+@ExceptionHandler(CityNotFoundException.class)
+    public ResponseEntity<Object> handleCityNotFoundException(
+        CityNotFoundException ex, WebRequest request) {
+
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "City not found");
+
+        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    }
+	
+	
+	this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+				.andExpect(content().string(containsString("Hello, World")));
+	}
+	
+	
+	prototype
+	
+	
+	        e1.showRecord();  
+        System.out.println("\n");  
+        EmployeeRecord e2=(EmployeeRecord) e1.getClone();  
+        e2.showRecord();  
+    }     
+	
+	
+	
+	
+	Different Operations On Streams-
+	
+Intermediate Operations:
+
+map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.
+List number = Arrays.asList(2,3,4,5);
+List square = number.stream().map(x->x*x).collect(Collectors.toList());
+filter: The filter method is used to select elements as per the Predicate passed as argument.
+List names = Arrays.asList("Reflection","Collection","Stream");
+List result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toList());
+sorted: The sorted method is used to sort the stream.
+List names = Arrays.asList("Reflection","Collection","Stream");
+List result = names.stream().sorted().collect(Collectors.toList());
+
+
+Terminal Operations:
+
+collect: The collect method is used to return the result of the intermediate operations performed on the stream.
+List number = Arrays.asList(2,3,4,5,3);
+Set square = number.stream().map(x->x*x).collect(Collectors.toSet());
+forEach: The forEach method is used to iterate through every element of the stream.
+List number = Arrays.asList(2,3,4,5);
+number.stream().map(x->x*x).forEach(y->System.out.println(y));
+reduce: The reduce method is used to reduce the elements of a stream to a single value.
+The reduce method takes a BinaryOperator as a parameter.
+
+
+
+The emptyList() method of Java Collections returns the list with no elements. This method is immutable. That is, we can not do any modifications after creating this method.
+
+Syntax:
+
+public static final <T> List<T> emptyList()  
+Parameters: It will not accept any parameters
+
+Return: This method will return an empty list
+
+
+Now, go and change the property value on the Configuration server and hit the actuator Endpoint POST URL http://localhost:8080/refresh and see the new configuration property value in the URL
+
+
+JWTs consist of three parts separated by dots (.), which are:
+
+Header
+Payload
+Signature
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+HEADER:ALGORITHM & TOKEN TYPE
+
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+PAYLOAD:DATA
+
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+VERIFY SIGNATURE
+
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  
+your-256-bit-secret
+
+) secret base64 encoded
+
+
+
+Primary keys
+A primary key is a column or a set of columns in a table whose values uniquely identify a row in the table. A relational database is designed to enforce the uniqueness of primary keys by allowing only 
+one row with a given primary key value in a table.
+Foreign keys
+A foreign key is a column or a set of columns in a table whose values correspond to the values of the primary key in another table. In order to add a row with a given foreign key value, there must 
+exist a row in the related table with the same primary key value.
+
+
+
+public class PredicateInterfaceExample1 {
+    public static void main(String[] args)
+    {
+        // Creating predicate
+        Predicate<Integer> lesserthan = i -> (i < 18); 
+  
+        // Calling Predicate method
+        System.out.println(lesserthan.test(10)); 
+    }
+}
+
+https://javagyansite.com/2018/12/27/functional-interfaces-predicate-consumer-function-and-supplier/
+
+
+test void method in junit
+
+predicate -> filter
+function->map  -> apply method
+consumer -> accept method
+Employee emp = new Employee("Gyan");
+
+Consumer<Employee> updateName = p -> p.setName("Praveen");
+updateName.accept(emp);
+
+System.out.println(emp.getName());
+
+supplier
+()->20
+get();
+
+
+f there is a lot of such methods, the thing which you might want to test here is that updateScreen() uses the right string, "some-command-green" and that the System.out is being invoked. In order to 
+do this you might want to extract System.out into an object field and mock it (i.e. with Mockito's spy()) to test the string that was provided to println.
+
+I.e.
+
+class MyClass{
+     PrintStream out = System.out;
+
+     public void updateGreen() { ... }
+}
+In test:
+
+@Test
+public void testUpdate(){
+     MyClass myClass = new MyClass();
+     myClass.out = Mockito.spy(new PrintStream(...));
+
+     // mock a call with an expected input
+     doNothing().when(myClass.out).println("expected command");
+	 
+	 
+	 lock
+	 
+	 obj compa key
+	 
+	  int sum = array.stream().reduce(0,
+                (element1, element2) -> element1 + element2);
+				
+				
+				
+				@Override
+public int hashCode()
+{
+    return theStringValue.hashCode();
+}
+and
+
+@Override
+public boolean equals(Object o)
+{
+    return this.theStringValue.equals(o);
+}
+
+class Geek 
+{
+      
+    public String name;
+    public int id;
+          
+    Geek(String name, int id) 
+    {
+              
+        this.name = name;
+        this.id = id;
+    }
+      
+    @Override
+    public boolean equals(Object obj)
+    {
+          
+    // checking if both the object references are 
+    // referring to the same object.
+    if(this == obj)
+            return true;
+          
+        // it checks if the argument is of the 
+        // type Geek by comparing the classes 
+        // of the passed argument and this object.
+        // if(!(obj instanceof Geek)) return false; ---> avoid.
+        if(obj == null || obj.getClass()!= this.getClass())
+            return false;
+          
+        // type casting of the argument. 
+        Geek geek = (Geek) obj;
+          
+        // comparing the state of argument with 
+        // the state of 'this' Object.
+        return (geek.name == this.name && geek.id == this.id);
+    }
+      
+    @Override
+    public int hashCode()
+    {
+          
+        // We are returning the Geek_id 
+        // as a hashcode value.
+        // we can also return some 
+        // other calculated value or may
+        // be memory address of the 
+        // Object on which it is invoked. 
+        // it depends on how you implement 
+        // hashCode() method.
+        return this.id;
+    }
+
+
+
+
+statics are implicitly transient, so you don't need to declare them as such.
+
+Serialization is for serializing instances, not classes. static fields (methods are irrelevant since they are part of the class definition so they aren't serialized) will be reinitialized to whatever 
+value they are set to when the class is loaded.
+
+If you have a mutable static field, then the changes made to that value will be lost.
+
+
+
+bean scope
+
+   // reduce() is called may be empty.
+        Optional<String> String_combine = Arrays.stream(array)
+                                           .reduce((str1, str2)
+                                           -> str1 + "-" + str2);
+  
+        // Displaying the combined String
+        if (String_combine.isPresent()) {
+            System.out.println(String_combine.get());
+        }
+		
+		
+		
+		.reduce(0.0f,(sum, price)->sum+price);  
+		
+		
+		
+https://www.geeksforgeeks.org/circular-dependencies-in-spring/
+
+Bean A → Bean B → Bean A
+
+Here as you can see, there is a circular dependency and Spring won’t be able to decide which of the beans should be created first, since they depend on one another. When Spring encountered this type 
+of issue, it raise an exception BeanCurrentlyInCreationException while loading context.
+
+
+myQuery(Pageable)
+
+
+3
+
+
+I think what you are looking for is Spring Data JPA Stream. It brings a significant performance boost to data fetching particularly in databases with millions of record. In your case you have several 
+options which you can consider
+
+Pull all data once in memory
+Use pagination and read pages each time
+Use something like Apache Spark
+Streaming data using Spring Data JPA
+In order to make Spring Data JPA Stream to work, we need to modify our MyRepository to return Stream<MyEntity> like this:
+
+public interface MyRepository extends PagingAndSortingRepository<MyEntity, Integer> {
+    @QueryHints(value = {
+        @QueryHint(name = HINT_CACHEABLE, value = "false"),
+        @QueryHint(name = READ_ONLY, value = "true")
+    })
+    @Query(value="SELECT * ...")
+    Stream<MyEntity> myQuery();
+}
+
+
+
+There are five types of spring bean scopes:
+
+singleton - only one instance of the spring bean will be created for the spring container. This is the default spring bean scope. While using this scope, make sure bean doesn’t have shared instance 
+variables otherwise it might lead to data inconsistency issues.
+prototype – A new instance will be created every time the bean is requested from the spring container.
+request – This is same as prototype scope, however it’s meant to be used for web applications. A new instance of the bean will be created for each HTTP request.
+session – A new bean will be created for each HTTP session by the container.
+global-session – This is used to create global session beans for Portlet applications.
+
+
+
+static void runAsyncExample() {
+    CompletableFuture<Void> cf = CompletableFuture.runAsync(() -> {
+        assertTrue(Thread.currentThread().isDaemon());
+        randomSleep();
+    });
+    assertFalse(cf.isDone());
+    sleepEnough();
+    assertTrue(cf.isDone());
+}cf.getNow(null));
+
+The most frequently used CompletableFuture methods are:
+
+The getNow(null) returns the result if completed (which is obviously the case), but otherwise returns null (the argument).
+
+supplyAsync(): It complete its job asynchronously. The result of supplier is run by a task from ForkJoinPool.commonPool() as default. The supplyAsync() method returns CompletableFuture on which we can
+ apply other methods.
+thenApply(): The method accepts function as an arguments. It returns a new CompletableStage when this stage completes normally. The new stage use as the argument to the supplied function.
+join(): the method returns the result value when complete. It also throws a CompletionException (unchecked exception) if completed exceptionally.
+
+
+
+select * from(
+select ename, sal, dense_rank() 
+over(order by sal desc)r from Employee) 
+where r=&n;
+
+
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+
+
+SELECT DISTINCT Salary FROM tblemployee ORDER BY Salary DESC LIMIT 1 OFFSET (n-1)
+If you want to find 8th highest salary, query should be :
+
+SELECT DISTINCT Salary FROM tblemployee ORDER BY Salary DESC LIMIT 1 OFFSET 7
+
+
+@Repository 
+public interface EmployeeRepository extends JpaRepository<Employee, Long>{
+    ArrayList<Employee> findAllEmployee();
+}
+
+
+get top 2 stream
+
+deep java
+
+how many dependencies checking
+
+
+
+65
+
+
+As shown in the getting started guide of spring-boot: https://spring.io/guides/gs/spring-boot/
+
+@SpringBootApplication
+public class Application {
+
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
+
+  @Bean
+  public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+    return args -> {
+
+      System.out.println("Let's inspect the beans provided by Spring Boot:");
+
+      String[] beanNames = ctx.getBeanDefinitionNames();
+      Arrays.sort(beanNames);
+      for (String beanName : beanNames) {
+        System.out.println(beanName);
+      }
+    };
+  }    
+}
+
+
+plan -> design -> develop -> test -> deploye -> review
+
+weekly release
+
+user stories
+
+
+task-task-t
+sub tast
+
+toDo -> dev -> ready for prod
+
+project plan,
+
+subtask each module
+
+inProgress-> dev
+
+toDo -> InProgresss -> done -> closed -> cancelled
+
+Kanban board
+
+reports
+
+issues
+
+TO DO
+3 OF 23
+IN PROGRESS
+1 OF 23
+QA DEPLOYED
+1 OF 2
+STAGING DEPLOYED
+0
+Release…
+DONE
+0 OF 47
+
+
+
+Spring Cloud load balancer (SLB) and Netflix Ribbon are two well-known client-side load balancer which are used to handle such situation. In this tutorial, we will use Spring Cloud Load Balancer.
+
+
+int secondLargestNumber = Arrays
+                .stream(numbers)
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .findFirst()
+                .get();
+				
+				
+Shallow Copy
+When we do a copy of some entity to create two or more than two entities such that changes in one entity are reflected in the other entities as well, then we can say we have done a shallow copy. In 
+shallow copy, new memory allocation never happens for the other entities, and the only reference is copied to the other entities. 
+
+
+class ABC  
+{  
+// instance variable of the class ABC  
+int x = 30;  
+}  
+public class ShallowCopyExample   
+{     
+// main method  
+public static void main(String argvs[])   
+{  
+// creating an object of the class ABC  
+ABC obj1 = new ABC();  
+  
+// it will copy the reference, not value  
+ABC obj2 = obj1;  
+  
+// updating the value to 6   
+// using the reference variable obj2  
+obj2.x = 6;  
+  
+// printing the value of x using reference variable obj1   
+System.out.println("The value of x is: " + obj1.x);  
+}  
+
+
+Deep Copy
+When we do a copy of some entity to create two or more than two entities such that changes in one entity are not reflected in the other entities, then we can say we have done a deep copy. In the deep
+ copy, a new memory allocation happens for the other entities, and reference is not copied to the other entities. Each entity has its own independent reference. The following example demonstrates the
+ same.
+
+FileName: DeepCopyExample.java
+
+class ABC  
+{  
+// instance variable of the class ABC  
+int x = 30;  
+}  
+public class DeepCopyExample   
+{     
+// main method  
+public static void main(String argvs[])   
+{  
+// creating an object of the class ABC  
+ABC obj1 = new ABC();  
+  
+// it will copy the reference, not value  
+ABC obj2 = new ABC();  
+  
+// updating the value to 6   
+// using the reference variable obj2  
+obj2.x = 6;  
+  
+// printing the value of x using reference variable obj1   
+System.out.println("The value of x is: " + obj1.x);  
+}  
+
+
+https://www.javaguides.net/2020/02/design-patterns-used-in-spring-framework.html
+Singleton Design Pattern
+prototype
+Factory design pattern
+
+This pattern allows the initialization of an object through a public static method, called the factory method.
+
+The Spring framework uses the factory design pattern for the creation of the object of beans by using the following two approaches.
+
+Spring BeanFactory Container: – It is the simplest container present in the spring framework which provides the basic support for DI (Dependency Injection). We use the following interface to work 
+with this container. [org.springframework.beans.factory.BeanFactory].
+
+Template Design Pattern
+This pattern used extensively to deal with boilerplate repeated code (such as closing connections cleanly, etc..). For example JdbcTemplate, JmsTemplate, JpaTemplate.
+
+Model View Controller Pattern
+
+Front Controller Pattern
+
+Spring provides DispatcherServlet to ensure an incoming request gets dispatched to your controllers.
+
+View Helper Pattern
+Spring has a number of custom JSP tags, and velocity macros, to assist in separating code from presentation in views.
+
+
+Dependency injection or inversion of control (IOC)
+
+Service Locator Pattern
+ServiceLocatorFactoryBean keeps information of all the beans in the context. When the client code asks for a service (bean) using a name, it simply locates that bean in the context and returns it. 
+Client code does not need to write spring-
+
+Repositoryas-admin
+Repositoryas-admin-old
+Repositoryas-boot-admin
+Repositoryas-callback - different vendors data
+Repositoryas-ccapi - book appointment for cc
+Repositoryas-chartfill - 
+Repositoryas-cm
+Repositoryas-config
+Repositoryas-config-server
+Repositoryas-flare - flareUp tablet fever, side effects
+Repositoryas-gateway
+Repositoryas-hyperwallet - payment gateway
+Repositoryas-iam - user details
+Repositoryas-medable - vendor appointment
+Repositoryas-patient - patient portal
+Repositoryas-registry
+Repositoryas-rmp - retention , patient after screening 
+Repositoryas-sb - 
+Repositoryas-twilio - 
+Repositoryas-vfov - vendor
+Repositoryeureka-service
+Repositoryflare-service
+
+
+
+https://www.tutorialspoint.com/spring_boot/spring_boot_file_handling.htm
+
+  @RequestMapping(value = "/upload", method = RequestMethod.POST, 
+      consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	  
+ File convertFile = new File("/var/tmp/"+file.getOriginalFilename());
+      convertFile.createNewFile();
+      FileOutputStream fout = new FileOutputStream(convertFile);
+      fout.write(file.getBytes());
+      fout.close();
+	  return "File is upload successfully";
+	  
+	  
+   @RequestMapping(value = "/download", method = RequestMethod.GET) 
+   public ResponseEntity<Object> downloadFile() throws IOException  {
+      String filename = "/var/tmp/mysql.png";
+      File file = new File(filename);
+      InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+      HttpHeaders headers = new HttpHeaders();
+      
+      headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getName()));
+      headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+      headers.add("Pragma", "no-cache");
+      headers.add("Expires", "0");
+      
+      ResponseEntity<Object> 
+      responseEntity = ResponseEntity.ok().headers(headers).contentLength(
+         file.length()).contentType(MediaType.parseMediaType("application/txt")).body(resource);
+
+@Value("classpath:data.txt")
+Resource resource;
+
+//Inside some method
+File file = resource.getFile();
+
+
+
+Read Uncommitted – Read Uncommitted is the lowest isolation level. In this level, one transaction may read not yet committed changes made by other transactions, thereby allowing dirty reads. At this 
+level, transactions are not isolated from each other.
+Read Committed – This isolation level guarantees that any data read is committed at the moment it is read. Thus it does not allow dirty read. The transaction holds a read or write lock on the current
+ row, and thus prevents other transactions from reading, updating, or deleting it.
+Repeatable Read – This is the most restrictive isolation level. The transaction holds read locks on all rows it references and writes locks on referenced rows for update and delete actions. Since 
+other transactions cannot read, update or delete these rows, consequently it avoids non-repeatable read.
+Serializable – This is the highest isolation level. A serializable execution is guaranteed to be serializable. Serializable execution is defined to be an execution of operations in which concurrently
+ executing transactions appears to be serially executing.
+	  
+	  
+	  
+The dialect specifies the type of database used in hibernate so that hibernate generate appropriate type of SQL statements. For connecting any hibernate application with the database, it is required 
+to provide the configuration of SQL dialect.
+
+
+Are static methods thread safe in Java?
+No, static functions are not inherently thread-safe
+
+
+
+<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui-login</artifactId>
+			<version>1.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server</artifactId>
+			<version>1.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<version>1.5.1</version>
+		</dependency>
+		
+		@Configuration
+	public static class SecurityConfig extends WebSecurityConfigurerAdapter {
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http.formLogin().loginPage("/login.html").loginProcessingUrl("/login").permitAll();
+			http.logout().logoutUrl("/logout");
+			http.csrf().disable();
+
+			http.authorizeRequests().antMatchers("/login.html", "/**/*.css", "/img/**", "/third-party/**").permitAll();
+			http.authorizeRequests().antMatchers("/**").authenticated();
+
+			http.httpBasic();
+			
+			
+			   <dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>1.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
+		spring.boot.admin.url=http://localhost:8093
+spring.boot.admin.username=admin
+spring.boot.admin.password=admin
+
+
+
+1. Self-signed Certificate
+For this example, we will use the JDK’s keytool to generate a self-sign certificate in PKCS12 format. The below command will create a PKCS12 cert, name mkyong.p12, puts this file into the resources folder.
+
+Terminal
+
+$ keytool -genkeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore mkyong.p12 -validity 365
+
+Enter keystore password:  
+Re-enter new password:
+What is your first and last name?
+  [Unknown]:  yong
+What is the name of your organizational unit?
+  [Unknown]:  mkyong
+What is the name of your organization?
+  [Unknown]:  mkyong
+What is the name of your City or Locality?
+  [Unknown]:         
+What is the name of your State or Province?
+  [Unknown]:  
+What is the two-letter country code for this unit?
+  [Unknown]:  
+Is CN=yong, OU=mkyong, O=mkyong, L=Unknown, ST=Unknown, C=Unknown correct?
+  [no]:  yes
+  
+  
+ For this example, we will use the JDK’s keytool to generate a self-sign certificate in PKCS12 format. The below command will create a PKCS12 cert, name mkyong.p12, puts this file into the resources 
+folder.
+
+server.port: 443
+server.ssl.key-store: keystore.p12
+server.ssl.key-store-password: springboot
+server.ssl.keyStoreType: PKCS12
+server.ssl.keyAlias: tomcat
+
+
+caassandra
+
+    Optional<Employee> secondHighestSalary = employees.stream()
+                .sorted(Comparator.comparing(Employee::getSalary).reversed())
+                .skip(1)
+                .findFirst();
+				
+				

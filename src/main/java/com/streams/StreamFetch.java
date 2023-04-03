@@ -18,9 +18,29 @@ class Product{
     }  
     @Override
     public String toString() {
-    	return String.valueOf(id);
+    	return String.valueOf(id)+"name:"+name;
     }
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+    
 }  
+
 
 public class StreamFetch {
 public static void main(String[] args) {
@@ -50,6 +70,9 @@ System.out.println(totalPrice1);
     Map<Integer, Product> proMap = new HashMap<Integer, Product>();
     proMap.put(1, new Product(1,"HP Laptop",25000f));
     proMap.put(2, new Product(4,"Sony Laptop",28000f));
+    
+    List<Product> productsList3 =  productsList.stream().filter(p->p.getName().equals("HP Laptop")).collect(Collectors.toList());
+    System.out.println(productsList3);
     
 }
 }
